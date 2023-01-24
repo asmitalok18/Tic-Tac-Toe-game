@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.ttt{
+    background-color: rgb(32, 68, 246);
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 20px;
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+}
+.gridContainer{
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 50px;
+    
+    /* margin-left: 20%; */
+    /* width: 50%; */
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+
+        
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    justify-items: center;   
+}
+.box:hover{
+    background-color: rgb(235, 213, 231);
+}
+.info{
+    font-size: 22px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-top: 35px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+#reset{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #f3e7f9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.line{
+    background-color: rgb(208, 35, 35);
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+
+}
+@media screen and (max-width:800px)
+ {
+    .gridContainer{
+        flex-wrap:wrap;
+    }
+    .gameInfo{
+        margin-top:34px;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+    .container {
+        
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
